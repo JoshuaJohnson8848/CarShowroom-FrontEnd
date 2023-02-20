@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBarMain from './components/TopBarMain/TopBarMain';
 import Banner from './components/Banner/Banner';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Banner />
           <TopBarMain />
           <Routes>
-            <Route />
+            <Route path="/" element={<Login />} />
           </Routes>
         </BrowserRouter>
       </header>
