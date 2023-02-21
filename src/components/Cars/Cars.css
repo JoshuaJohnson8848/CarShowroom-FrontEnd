@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  width: 100%;
+  padding: 150px 0px 150px 0px;
+  height: 728px;
+  justify-content: center;
+}
+.car_card {
+  width: 50rem;
+  height: 25rem;
+  background-color: lightgrey;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.car_card::-webkit-scrollbar {
+  display: none;
+}
+
+.car-attr {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.hr {
+  margin-top: 10px;
+}

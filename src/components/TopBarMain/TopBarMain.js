@@ -27,6 +27,14 @@ function TopBarMain() {
             >
               Signup
             </Navbar.Brand>
+            <Navbar.Brand
+              className="Navtext_color"
+              onClick={() => {
+                navigate('/');
+              }}
+            >
+              Login
+            </Navbar.Brand>
           </Nav>
         </Container>
       </Navbar>
