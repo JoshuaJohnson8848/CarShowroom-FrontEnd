@@ -75,7 +75,6 @@ function Cars() {
                     }}
                   >
                     Book
-                    <h1>{car._id}</h1>
                   </Button>
                 ) : (
                   <>
@@ -138,26 +137,28 @@ function Cars() {
             );
           })}
         </Card>
-        <Row className="AddButton mt-3 ">
-          <Col className="AddButton d-flex justify-content-center">
-            <Button
-              variant="primary"
-              type="submit"
-              style={{
-                width: '100px',
-                height: '50px',
-                marginTop: '50rem',
-                marginRight: '82rem',
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                navigate('/Add');
-              }}
-            >
-              Add
-            </Button>
-          </Col>
-        </Row>
+        {token ? (
+          <Row className="AddButton mt-3 ">
+            <Col className="AddButton d-flex justify-content-center">
+              <Button
+                variant="primary"
+                type="submit"
+                style={{
+                  width: '100px',
+                  height: '50px',
+                  marginTop: '50rem',
+                  marginRight: '82rem',
+                }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/Add');
+                }}
+              >
+                Add
+              </Button>
+            </Col>
+          </Row>
+        ) : null}
       </Container>
     </div>
   );

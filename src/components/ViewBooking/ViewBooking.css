@@ -1,0 +1,37 @@
+.education_card {
+  width: 40rem;
+  height: 30rem;
+  /* background-color: rgb(99, 227, 225); */
+  background-color: #bcb4b4;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 150px 0px 150px 0px;
+}
+
+.education_Header {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.education_card::-webkit-scrollbar {
+  display: none;
+}
+
+.card-shadow {
+  box-shadow: 0px 0px 40px #000000;
+}
+
+.rowcolor {
+  background-color: #0dcaf0;
+}

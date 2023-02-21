@@ -45,6 +45,14 @@ function TopBarMain() {
             >
               Logout
             </Navbar.Brand>
+            <Navbar.Brand
+              className="Navtext_color"
+              onClick={() => {
+                navigate('/bookings');
+              }}
+            >
+              Bookings
+            </Navbar.Brand>
           </Nav>
         </Container>
       </Navbar>

@@ -10,6 +10,8 @@ import { LoginContext } from './Contexts/LoginContext';
 import { useState } from 'react';
 import EditCar from './components/EditCar/EditCar';
 import AddCar from './components/AddCar/AddCar';
+import ViewBooking from './components/ViewBooking/ViewBooking';
+import FilterBooking from './components/FilterBooking/FilterBooking';
 
 function App(props) {
   const [user, setUser] = useState({});
@@ -27,6 +29,8 @@ function App(props) {
               <Route path="/book" element={<BookCar />} />
               <Route path="/editCar" element={<EditCar />} />
               <Route path="/Add" element={<AddCar />} />
+              <Route path="/bookings" element={<ViewBooking />} />
+              <Route path="/filter" element={<FilterBooking />} />
             </Routes>
           </BrowserRouter>
         </header>
