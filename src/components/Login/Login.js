@@ -54,9 +54,11 @@ function Login() {
                 .then((response) => {
                   console.log(response);
                   const status = response.status;
+                  const token = response.token;
+                  localStorage.setItem('token', token);
                   //redirect logic
                   if (status == 200) {
-                    navigate('/car');
+                    navigate('/cars');
                   }
                 })
                 .catch((err) => {

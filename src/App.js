@@ -6,24 +6,28 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Cars from './components/Cars/Cars';
 import BookCar from './components/BookCar/BookCar';
+import { LoginContext } from './Contexts/LoginContext';
+import { useState } from 'react';
 
 function App(props) {
+  const [user, setUser] = useState({});
   return (
-    <div className="App">
-      {console.log(props)}
-      <header className="App-header">
-        <BrowserRouter>
-          <Banner />
-          <TopBarMain />
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/cars" element={<Cars />} />
-            <Route path="/book" element={<BookCar />} />
-          </Routes>
-        </BrowserRouter>
-      </header>
-    </div>
+    <LoginContext.Provider value={{ user, setUser }}>
+      <div className="App">
+        <header className="App-header">
+          <BrowserRouter>
+            <Banner />
+            <TopBarMain />
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/cars" element={<Cars />} />
+              <Route path="/book" element={<BookCar />} />
+            </Routes>
+          </BrowserRouter>
+        </header>
+      </div>
+    </LoginContext.Provider>
   );
 }
 

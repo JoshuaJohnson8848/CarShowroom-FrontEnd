@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function TopBarMain() {
   const navigate = useNavigate();
+  const token = localStorage.getItem('token');
   return (
     <div>
       <Navbar className="color_nav">
@@ -34,6 +35,15 @@ function TopBarMain() {
               }}
             >
               Login
+            </Navbar.Brand>
+            <Navbar.Brand
+              className="Navtext_color"
+              onClick={() => {
+                localStorage.removeItem('token');
+                navigate('/');
+              }}
+            >
+              Logout
             </Navbar.Brand>
           </Nav>
         </Container>
