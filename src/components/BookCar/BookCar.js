@@ -20,7 +20,6 @@ function BookCar(props) {
   return (
     <div>
       <Container className="container">
-        {console.log(fullname, address, phone, carId, status, locations, date)}
         <Form form rounded form-shadow>
           <InputGroup>
             <Form.Group className="mb-3" controlId="formBasicEmail">
