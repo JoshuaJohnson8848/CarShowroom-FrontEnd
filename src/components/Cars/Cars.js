@@ -18,7 +18,7 @@ function Cars() {
   const [cars, setCars] = useState([]);
   const [car, setCar] = useState({});
   const token = localStorage.getItem('token');
-  console.log(token);
+
   useEffect(() => {
     axios
       .get('http://localhost:9000/cars')
@@ -75,6 +75,7 @@ function Cars() {
                     }}
                   >
                     Book
+                    <h1>{car._id}</h1>
                   </Button>
                 ) : (
                   <>
@@ -111,15 +112,15 @@ function Cars() {
                       onClick={(e) => {
                         e.preventDefault();
                         axios
-                          .get(`http://localhost:9000/cars/${car._id}`)
+                          .delete(`http://localhost:9000/cars/${car._id}`)
                           .then((response) => {
                             // console.log(response);
-                            setCar(response.data.car);
+
                             console.log(car);
                             const status = response.status;
                             //redirect logic
                             if (status == 200) {
-                              navigate('/DeleteCar', { state: car });
+                              navigate('/cars');
                             }
                           })
                           .catch((err) => {
