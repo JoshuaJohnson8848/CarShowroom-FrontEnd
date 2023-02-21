@@ -8,6 +8,7 @@ import Cars from './components/Cars/Cars';
 import BookCar from './components/BookCar/BookCar';
 import { LoginContext } from './Contexts/LoginContext';
 import { useState } from 'react';
+import EditCar from './components/EditCar/EditCar';
 
 function App(props) {
   const [user, setUser] = useState({});
@@ -23,6 +24,7 @@ function App(props) {
               <Route path="/signup" element={<Signup />} />
               <Route path="/cars" element={<Cars />} />
               <Route path="/book" element={<BookCar />} />
+              <Route path="/editCar" element={<EditCar />} />
             </Routes>
           </BrowserRouter>
         </header>
