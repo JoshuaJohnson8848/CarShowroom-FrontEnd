@@ -4,6 +4,7 @@ import TopBarMain from './components/TopBarMain/TopBarMain';
 import Banner from './components/Banner/Banner';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
+import Cars from './components/Cars/Cars';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/cars" element={<Cars />} />
           </Routes>
         </BrowserRouter>
       </header>
