@@ -13,10 +13,10 @@ function Cars() {
     axios
       .get('http://localhost:9000/cars')
       .then((res) => {
-        console.log(res);
-        console.log(res.data.cars);
+        // console.log(res);
+        // console.log(res.data.cars);
         setCars(res.data.cars);
-        console.log(cars);
+        // console.log(cars);
       })
       .catch((err) => {
         console.log(err);
@@ -54,7 +54,7 @@ function Cars() {
                         const status = response.status;
                         //redirect logic
                         if (status == 200) {
-                          navigate('/book', { car: car });
+                          navigate('/book', { state: car });
                         }
                       })
                       .catch((err) => {
