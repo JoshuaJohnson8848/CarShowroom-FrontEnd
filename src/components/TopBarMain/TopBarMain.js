@@ -20,22 +20,26 @@ function TopBarMain() {
             >
               Cars
             </Navbar.Brand>
-            <Navbar.Brand
-              className="Navtext_color"
-              onClick={() => {
-                navigate('/signup');
-              }}
-            >
-              Signup
-            </Navbar.Brand>
-            <Navbar.Brand
-              className="Navtext_color"
-              onClick={() => {
-                navigate('/');
-              }}
-            >
-              Login
-            </Navbar.Brand>
+            {token ? null : (
+              <Navbar.Brand
+                className="Navtext_color"
+                onClick={() => {
+                  navigate('/signup');
+                }}
+              >
+                Signup
+              </Navbar.Brand>
+            )}
+            {token ? null : (
+              <Navbar.Brand
+                className="Navtext_color"
+                onClick={() => {
+                  navigate('/');
+                }}
+              >
+                Login
+              </Navbar.Brand>
+            )}
             <Navbar.Brand
               className="Navtext_color"
               onClick={() => {
@@ -45,14 +49,16 @@ function TopBarMain() {
             >
               Logout
             </Navbar.Brand>
-            <Navbar.Brand
-              className="Navtext_color"
-              onClick={() => {
-                navigate('/bookings');
-              }}
-            >
-              Bookings
-            </Navbar.Brand>
+            {token ? (
+              <Navbar.Brand
+                className="Navtext_color"
+                onClick={() => {
+                  navigate('/bookings');
+                }}
+              >
+                Bookings
+              </Navbar.Brand>
+            ) : null}
           </Nav>
         </Container>
       </Navbar>

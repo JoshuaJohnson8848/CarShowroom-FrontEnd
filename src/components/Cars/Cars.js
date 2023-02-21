@@ -11,6 +11,7 @@ import {
   RowProps,
 } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { CSVLink, CSVDownload } from 'react-csv';
 import axios from 'axios';
 
 function Cars() {
@@ -159,6 +160,8 @@ function Cars() {
             </Col>
           </Row>
         ) : null}
+        {/* <CSVLink data={cars}>Export to CSV</CSVLink>; */}
+        {/* <CSVDownload data={cars} target="_blank" />; */}
       </Container>
     </div>
   );
