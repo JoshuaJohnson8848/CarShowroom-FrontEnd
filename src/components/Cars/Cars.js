@@ -56,6 +56,27 @@ function Cars() {
   });
   return (
     <div>
+      <Row
+        style={{
+          height: '1px',
+          width: '100px',
+        }}
+      >
+        <CSVLink
+          style={{
+            height: '30px',
+            textAlign: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'red',
+            marginBottom: '55rem',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}
+          {...csvLink}
+        >
+          <h5>CSV File</h5>
+        </CSVLink>
+      </Row>
       <Container container>
         <Card className="car_card mx-auto card-shadow rounded ">
           <br />
@@ -181,23 +202,6 @@ function Cars() {
             </Col>
           </Row>
         ) : null}
-        <Row>
-          <CSVLink
-            style={{
-              height: '30px',
-              textAlign: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'red',
-              marginBottom: '55rem',
-              textDecoration: 'none',
-              // paddingLeft: '0',
-              // marginLeft: '0',
-            }}
-            {...csvLink}
-          >
-            <h5>Export to CSV</h5>
-          </CSVLink>
-        </Row>
       </Container>
     </div>
   );
