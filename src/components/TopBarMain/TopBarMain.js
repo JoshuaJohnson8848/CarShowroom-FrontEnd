@@ -40,15 +40,17 @@ function TopBarMain() {
                 Login
               </Navbar.Brand>
             )}
-            <Navbar.Brand
-              className="Navtext_color"
-              onClick={() => {
-                localStorage.removeItem('token');
-                navigate('/');
-              }}
-            >
-              Logout
-            </Navbar.Brand>
+            {!token ? null : (
+              <Navbar.Brand
+                className="Navtext_color"
+                onClick={() => {
+                  localStorage.removeItem('token');
+                  navigate('/');
+                }}
+              >
+                Logout
+              </Navbar.Brand>
+            )}
             {token ? (
               <Navbar.Brand
                 className="Navtext_color"
