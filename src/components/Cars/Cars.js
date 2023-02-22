@@ -190,7 +190,7 @@ function Cars() {
                   width: '100px',
                   height: '50px',
                   marginTop: '50rem',
-                  marginRight: '74rem',
+                  marginRight: '82rem',
                 }}
                 onClick={(e) => {
                   e.preventDefault();
