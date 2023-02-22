@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { Form, Button, Container, InputGroup, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './BookCar.css';
@@ -9,6 +9,7 @@ function BookCar(props) {
   const location = useLocation();
   const navigate = useNavigate();
   const car = location.state;
+
   const [fullname, setFullname] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
@@ -16,7 +17,6 @@ function BookCar(props) {
   const [status, setStatus] = useState('Booked');
   const [locations, setLocation] = useState('');
   const [date, setDate] = useState('');
-
   return (
     <div>
       <Container className="container">
