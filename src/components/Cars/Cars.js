@@ -19,6 +19,27 @@ function Cars() {
   const [cars, setCars] = useState([]);
   const [car, setCar] = useState({});
   const token = localStorage.getItem('token');
+  console.log(cars);
+  const headers = [
+    {
+      label: 'Brand',
+      key: 'brand',
+    },
+    {
+      label: 'Name',
+      key: 'carName',
+    },
+    {
+      label: 'Segment',
+      key: 'segment',
+    },
+  ];
+
+  const csvLink = {
+    filenam: 'cars.csv',
+    headers: headers,
+    data: cars,
+  };
 
   useEffect(() => {
     axios
@@ -148,7 +169,7 @@ function Cars() {
                   width: '100px',
                   height: '50px',
                   marginTop: '50rem',
-                  marginRight: '82rem',
+                  marginRight: '74rem',
                 }}
                 onClick={(e) => {
                   e.preventDefault();
@@ -160,8 +181,23 @@ function Cars() {
             </Col>
           </Row>
         ) : null}
-        {/* <CSVLink data={cars}>Export to CSV</CSVLink>; */}
-        {/* <CSVDownload data={cars} target="_blank" />; */}
+        <Row>
+          <CSVLink
+            style={{
+              height: '30px',
+              textAlign: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'red',
+              marginBottom: '55rem',
+              textDecoration: 'none',
+              // paddingLeft: '0',
+              // marginLeft: '0',
+            }}
+            {...csvLink}
+          >
+            <h5>Export to CSV</h5>
+          </CSVLink>
+        </Row>
       </Container>
     </div>
   );
